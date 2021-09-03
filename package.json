@@ -1,0 +1,17 @@
+{
+  "name": "cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "cucumber": "./node_modules/.bin/cucumber-js --tags 'not @wip' ./features/*.feature"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  }
+}
