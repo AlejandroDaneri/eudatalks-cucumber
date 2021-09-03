@@ -16,6 +16,11 @@ let bankAccount = class BankAccount {
     get balance() {
         return this.balance;
     }
+
+    transfer(from, to, quantity) {
+        from.withdraw(quantity);
+        to.deposit(quantity);
+    }
 };
 
 module.exports = bankAccount;
