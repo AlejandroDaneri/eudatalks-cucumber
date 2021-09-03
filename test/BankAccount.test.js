@@ -15,4 +15,11 @@ describe('BankAccount', function () {
         account.deposit(10);
         expect(account.balance).to.be.eq(30);
     });
+    it('Transfering funds from an account to another should update both account balances', function () {
+        let account1 = new bankAccount(20);
+        let account2 = new bankAccount(10);
+        account1.transfer(account1, account2, 20);
+        expect(account1.balance).to.be.eq(0);
+        expect(account2.balance).to.be.eq(30);
+    });
 });
